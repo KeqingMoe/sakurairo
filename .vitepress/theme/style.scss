@@ -1,0 +1,124 @@
+:root {
+    --iro-global-font-weight: 300;
+    --iro-font-color: #505050;
+    --iro-dm-bg-transparency: 0.8;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica;
+    overflow-x: hidden;
+    background-color: unset;
+
+    &.iro-open-nav{
+        overflow: hidden;
+    }
+
+    &.dark {
+        --iro-font-color: #CCCCCC;
+
+        background-color: rgb(51,51,51);
+
+    }
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track,
+    &.dark::-webkit-scrollbar-thumb {
+        background-color: #eee;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--iro-theme-skin);
+        border-radius: 25px;
+    }
+
+    &.dark::-webkit-scrollbar-track {
+        background-color: var(--iro-theme-skin);
+    }
+
+    &.dark :deep(.iro-scroll-percent) {
+        background-color: var(--iro-theme-skin-dark);
+    }
+}
+
+
+body {
+    margin: 0;
+    font-size: 17px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .1);
+    color: var(--iro-font-color);
+    font-size: 15px;
+    line-height: 1.5;
+    background: #0000;
+    background-attachment: fixed;
+    background-position: center;
+    scrollbar-width: 6px;
+    font-weight: var(--iro-global-font-weight);
+
+    font-family: Noto Serif SC !important;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    outline: 0;
+    transition: color .2s ease-out, border .2s ease-out, opacity .2s ease-out;
+    word-break: break-word;
+}
+
+.iro-no-select {
+    user-select: none;
+}
+
+input {
+    color: var(--iro-theme-skin);
+    font: inherit;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 15px;
+    font-weight: var(--iro-global-font-weightK);
+}
+
+input[type=search] {
+    color: #666;
+    border: 1px solid var(--iro-theme-skin, #505050);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+ul {
+    margin: 5px;
+    padding-left: 0px;
+    list-style: disc;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+button {
+    color: var(--iro-btn-bg-color);
+    font: inherit;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    appearance: button;
+    cursor: pointer;
+    font-size: .75rem;
+    line-height: 1;
+    border: 1px solid;
+    border-color: #ccc #ccc #bbb;
+    border-radius: 3px;
+    background: #e6e6e6;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 15px 17px rgba(255, 255, 255, .5), inset 0 -5px 12px rgba(0, 0, 0, .05);
+    padding: .6em 1em .4em;
+    font-weight: var(--iro-global-font-weight);
+}
