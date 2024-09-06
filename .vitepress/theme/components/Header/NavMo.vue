@@ -69,6 +69,7 @@ const iroDark = inject('iroDark');
                 height: 80px;
                 max-width: 80px;
                 border-radius: 100%;
+                margin: auto;
             }
         }
     }

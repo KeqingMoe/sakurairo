@@ -1,6 +1,7 @@
 import { defineConfigWithTheme } from 'vitepress';
 import { ruby } from "@mdit/plugin-ruby";
 import iro from './theme/iro';
+import { statSync } from 'fs';
 
 export default defineConfigWithTheme({
     title: iro.title,
@@ -18,4 +19,19 @@ export default defineConfigWithTheme({
         ['link', { rel: 'icon', href: iro.favicon }],
     ],
     lang: 'zh',
+    transformPageData(pageData) {
+        if(pageData.isNotFound)return;
+
+        pageData.lastUpdated=statSync(pageData.filePath).mtimeMs
+        
+        if(!('layout' in pageData.frontmatter)){
+            pageData.frontmatter.layout='post'
+        }
+
+        const title='VitePress 主题 Sakurairo 自述文件';
+        if(pageData.filePath=='readme.md'){
+            pageData.title=title;
+            pageData.frontmatter.title=title;
+        }
+    },
 });

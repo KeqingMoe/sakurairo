@@ -8,6 +8,7 @@ import Home from './components/Home/Home.vue';
 import Nav from './components/Header/Nav.vue';
 import Panel from './components/Panel.vue';
 import NavMo from './components/Header/NavMo.vue';
+import Post from './components/Post/Post.vue'
 
 import { data as iro } from './iro.data';
 
@@ -72,15 +73,25 @@ for (let key in iro.style) {
                 <slot v-if="page.isNotFound" name="iro-not-found">
                     <NotFound />
                 </slot>
-                <slot v-else-if="frontmatter.layout == 'doc'" name="iro-post">
+                <slot v-else-if="frontmatter.layout == 'page'" name="iro-page">
                     <Content />
                 </slot>
-                <Home v-else-if="frontmatter.layout == 'home'"></Home>
-                <slot v-else name="iro-content">
+                <slot v-else-if="frontmatter.layout == 'home'" name="iro-home">
+                    <Home>
+                        <template v-slot:iro-home-page>
+                            <slot name="iro-home-page"></slot>
+                        </template>
+                    </Home>
+                </slot>
+                <slot v-else-if="frontmatter.layout == 'post'" name="iro-post">
+                    <Post>
+                        <Content class="vp-doc" />
+                    </Post>
+                </slot>
+                <slot v-else name="iro-other">
                     <Content />
                 </slot>
             </div>
-
 
             <Footer>
                 <template v-slot:iro-footer>

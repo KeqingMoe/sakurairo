@@ -51,9 +51,9 @@ export default {
         content: 'Hello world!',
         beforeSlot: false,
     },
-    error404:{
-        title:'404 Not Found',
-        text:'这里什么都没有...',
+    error404: {
+        title: '404 Not Found',
+        text: '这里什么都没有...',
     },
     style: {
         themeSkin: '#8e78c6',

@@ -20,6 +20,8 @@ export default {
     nav: {
         links: [
             { title: '首页', url: '/' },
+            { title: '演示页面', url: '/example' },
+            { title: '自述文件', url: '/readme' },
             { title: '404 页面演示', url: '/404' },
             { title: '源码', url: 'https://github.com/KeqingMoe/sakurairo' },
         ]

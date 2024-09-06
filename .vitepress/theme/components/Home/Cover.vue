@@ -19,7 +19,7 @@ const isMobile = () => {
 const iroBgUrlRaw = isMobile() ? iro.cover.background.mobile : iro.cover.background.desktop;
 
 const iroBgUrl = computed(() => {
-    return iroRandom?iroBgUrlRaw+'?'+iroBgPageId.value:iroBgUrlRaw
+    return iroRandom ? iroBgUrlRaw + '?' + iroBgPageId.value : iroBgUrlRaw
 });
 
 </script>
@@ -180,32 +180,6 @@ const iroBgUrl = computed(() => {
                 }
             }
         }
-    }
-}
-
-@keyframes iro-fade-in-down {
-    0% {
-        -moz-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-        opacity: 0
-    }
-
-    50% {
-        -moz-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-        opacity: 0
-    }
-
-    100% {
-        -moz-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        -webkit-transform: translateY(0%);
-        transform: translateY(0%);
-        opacity: 1
     }
 }
 </style>
