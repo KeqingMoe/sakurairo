@@ -2,6 +2,8 @@
 
 将 [WordPress 主题 Sakurairo](https://github.com/mirai-mamori/Sakurairo) 移植到 VitePress。
 
+演示站点：[iro.keqing.moe](https://iro.keqing.moe) [sakurairo.pages.dev](https://sakurairo.pages.dev)。
+
 ## 特性
 
 - 适用于 VitePress 的静态站点，响应速度远快于 WordPress，可以部署于静态站点托管平台

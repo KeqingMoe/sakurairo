@@ -5,6 +5,7 @@ import { IroConfig } from "./types.mts";
  */
 export default {
     title: "Sakurairo",
+    titleTemplate: "Sakurairo 主题演示站点",
     description: "Hello world!",
     favicon: '/favicon.png',
     titleIcon: '/icon.png',

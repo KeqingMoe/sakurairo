@@ -7,6 +7,10 @@ export interface IroConfig {
      */
     title:string;
     /**
+     * 网站标题后缀
+     */
+    titleTemplate?:string;
+    /**
      * 网站描述
      */
     description: string;

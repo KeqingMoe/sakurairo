@@ -5,6 +5,7 @@ import { statSync } from 'fs';
 
 export default defineConfigWithTheme({
     title: iro.title,
+    titleTemplate: iro.titleTemplate,
     description: iro.description,
     cleanUrls: true,
     ignoreDeadLinks: true,
