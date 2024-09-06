@@ -3,7 +3,7 @@ import { useData } from 'vitepress'
 import { onMounted, onUnmounted, provide, ref, watch } from 'vue';
 
 import NotFound from './NotFound.vue';
-import Footer from './components/footer.vue';
+import Footer from './components/Footer.vue';
 import Home from './components/Home/Home.vue';
 import Nav from './components/Header/Nav.vue';
 import Panel from './components/Panel.vue';
