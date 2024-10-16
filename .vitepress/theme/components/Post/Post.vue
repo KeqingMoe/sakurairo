@@ -15,26 +15,28 @@ const date = computed(
 </script>
 
 <template>
-    <div class="iro-blank" style="padding-top: 75px;"></div>
-    <div class="iro-root" :class="{ 'iro-light': !iroDark, 'iro-dark': iroDark }">
-        <main class="iro-post-main">
-            <article>
-                <header class="iro-post-header">
-                    <h1 class="iro-post-title">
-                        {{ $frontmatter.title ?? '文章' }}
-                    </h1>
-                    <p class="iro-post-ctime">
-                        最后更新时间：
-                        <time :datetime="date.toISOString">{{ date.toLocaleString() }}</time>
-                    </p>
-                    <hr />
-                </header>
-                <div class="iro-post-content">
-                    <slot></slot>
-                </div>
-                <div class="iro-post-footer"></div>
-            </article>
-        </main>
+    <div>
+        <div class="iro-blank" style="padding-top: 75px;"></div>
+        <div class="iro-root" :class="{ 'iro-light': !iroDark, 'iro-dark': iroDark }">
+            <main class="iro-post-main">
+                <article>
+                    <header class="iro-post-header">
+                        <h1 class="iro-post-title">
+                            {{ $frontmatter.title ?? '文章' }}
+                        </h1>
+                        <p class="iro-post-ctime">
+                            最后更新时间：
+                            <time :datetime="date.toISOString">{{ date.toLocaleString() }}</time>
+                        </p>
+                        <hr />
+                    </header>
+                    <div class="iro-post-content">
+                        <slot></slot>
+                    </div>
+                    <div class="iro-post-footer"></div>
+                </article>
+            </main>
+        </div>
     </div>
 </template>
 
@@ -70,6 +72,17 @@ const date = computed(
 .iro-post-main {
     display: block;
     padding: 7.5% 0 0;
+    margin-left: 10px;
+}
+
+:deep(h1),
+:deep(h2),
+:deep(h3),
+:deep(h4),
+:deep(h5),
+:deep(h6) {
+    margin-left: -10px;
+    /* 或者你希望的任何缩进值 */
 }
 
 article {

@@ -1,8 +1,8 @@
-import { IroConfig } from "./types.mts";
-import iro from "./iro";
+import { Iro } from "./config/types.mts";
+import iro from "./config/iro";
 
 export default {
-    load(){
+    load() {
         return iro;
     }
-}
+};

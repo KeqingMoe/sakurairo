@@ -20,6 +20,9 @@ import Layout from './Layout.vue';
             <template v-slot:iro-home>
                 <slot name="iro-home"></slot>
             </template>
+            <template v-slot:iro-post-list>
+                <slot name="iro-post-list"></slot>
+            </template>
             <template v-slot:iro-post>
                 <slot name="iro-post"></slot>
             </template>

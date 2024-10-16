@@ -31,13 +31,13 @@ const toggleSearch = () => iroShowSearch.value = !iroShowSearch.value;
 .iro-root {
 	&.iro-light {
 		--iro-var-1: rgba(255, 255, 255, 0.7);
-		--iro-var-2: var(--iro-theme-skin)!important;
+		--iro-var-2: var(--iro-theme-skin) !important;
 		--iro-var-3: rgba(255, 255, 255, 0.7);
 	}
 
 	&.iro-dark {
 		--iro-var-1: rgba(51, 51, 51, 0.9);
-		--iro-var-2: #CCCCCC!important;
+		--iro-var-2: #CCCCCC !important;
 		--iro-var-3: rgba(51, 51, 51, 0.8);
 	}
 }

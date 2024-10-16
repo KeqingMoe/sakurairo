@@ -29,25 +29,26 @@ const iroBgUrl = computed(() => {
         <figure class="iro-center-bg" :style="{ 'background-image': 'url(' + iroBgUrl + ')' }">
             <div class="iro-focus-info">
                 <div class="iro-favicon">
-                    <a href="/" data-wpel-link="internal">
-                        <img alt="avatar" loading="lazy" :src="iro.avatar">
+                    <a href="/">
+                        <img alt="avatar" loading="lazy" :src="iro.cover.avatar">
                     </a>
                 </div>
                 <div class="iro-signature">
                     <slot name="iro-signature">
-                        <p>{{ iro.signature }}</p>
+                        <p>{{ iro.cover.signature }}</p>
                     </slot>
                 </div>
 
                 <div class="iro-social">
-                    <CoverSocialButton iro-icon-name="pre" @click="() => { --iroBgPageId; }" alt="上一篇">
+                    <CoverSocialButton v-if="iroRandom" iro-icon-name="pre" @click="() => { --iroBgPageId; }" alt="上一篇">
                     </CoverSocialButton>
 
                     <CoverSocialButton v-if="iro.social?.links" v-for="link in iro.social.links"
                         :iro-icon-name="link.icon" :iro-icon-url="link?.iconUrl" :iro-link="link.link" :alt="link.name">
                     </CoverSocialButton>
 
-                    <CoverSocialButton iro-icon-name="next" @click="() => { ++iroBgPageId; }" alt="下一篇">
+                    <CoverSocialButton v-if="iroRandom" iro-icon-name="next" @click="() => { ++iroBgPageId; }"
+                        alt="下一篇">
                     </CoverSocialButton>
                 </div>
             </div>

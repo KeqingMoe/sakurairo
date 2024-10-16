@@ -1,4 +1,4 @@
-import { IroConfig } from "./types.mts";
+import { Iro } from "./types.mts";
 
 /**
  * VitePress 主题 Sakurairo 的配置文件示例
@@ -8,10 +8,9 @@ export default {
     titleTemplate: "Sakurairo 主题演示站点",
     description: "Hello world!",
     favicon: '/favicon.png',
-    titleIcon: '/icon.png',
-    avatar: '/avatar.png',
-    signature: '正在努力移植到 VitePress！',
     cover: {
+        avatar: '/avatar.png',
+        signature: '正在努力移植到 VitePress！',
         background: {
             random: true,
             desktop: 'https://t.alcy.cc/fj/',
@@ -19,6 +18,7 @@ export default {
         }
     },
     nav: {
+        icon: '/icon.png',
         links: [
             { title: '首页', url: '/' },
             { title: '404 页面演示', url: '/404' },
@@ -64,4 +64,12 @@ export default {
         menuRadius: '10px',
         menuSelectionRadius: '10px',
     },
-} satisfies IroConfig;
+    posts:[
+        {
+            title:'这不是一篇文章',
+            url:'/404',
+            date:'2024-10-16',
+            description:'点进去是 404 页面。'
+        }
+    ]
+} satisfies Iro.Config;

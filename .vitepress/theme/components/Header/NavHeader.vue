@@ -23,7 +23,7 @@ const toggleSearch = () => iroShowSearch.value = !iroShowSearch.value;
         <div class="iro-header-container">
             <div class="iro-site-branding">
                 <div class="iro-site-icon">
-                    <a href="/" data-wpel-link="internal"><img :src="iro.titleIcon"></a>
+                    <a href="/"><img :src="iro.nav.icon"></a>
                 </div>
             </div>
             <div class="iro-search-box" @click="toggleSearch">
@@ -139,6 +139,10 @@ const toggleSearch = () => iroShowSearch.value = !iroShowSearch.value;
                     display: inline-block;
                     color: var(--iro-var-4);
 
+                    &:hover {
+                        color: var(--iro-theme-skin-matching, #F9D938);
+                    }
+
                     &::after {
                         content: "";
                         display: block;
@@ -150,10 +154,6 @@ const toggleSearch = () => iroShowSearch.value = !iroShowSearch.value;
                         border-radius: 30px;
                         max-width: 0;
                         transition: max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                    }
-
-                    &:hover {
-                        color: var(--iro-theme-skin-matching, #F9D938);
                     }
 
                     &:hover::after {

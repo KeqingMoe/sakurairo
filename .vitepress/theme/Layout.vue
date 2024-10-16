@@ -24,7 +24,7 @@ provide('iroDark', iroDark);
 provide('iroNavOpen', iroNavOpen);
 provide('isAtTop', isAtTop);
 
-watch(iroDark, (iroDark_) => {
+watch(iroDark, iroDark_ => {
     localStorage.setItem('iro-theme', iroDark_ ? 'dark' : 'light');
 });
 
@@ -107,7 +107,12 @@ for (let key in iro.style) {
 @import url(https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+SC|Noto+Sans+SC|Dela+Gothic+One|Fira+Code&display=swap);
 
 .iro-root {
+    color: var(--iro-font-color);
+    
     &.iro-light {
+        --iro-global-font-weight: 300;
+        --iro-font-color: #505050;
+        --iro-dm-bg-transparency: 0.8;
 
         // --iro-var-1: rgb(255, 255, 255, 0.9); 这行必须注释掉，因为我不知道为什么在注释掉下面的那行后这一行会透传到里面去
         @media (max-width:860px) {
@@ -121,15 +126,23 @@ for (let key in iro.style) {
     }
 
     &.iro-dark {
+        --iro-font-color: #CCCCCC;
+        background-color: rgb(51, 51, 51);
 
         // --iro-var-1: transparent; 不知道为什么这里必须删掉这一行才能还原原本的色彩
         :deep(img) {
             filter: brightness(0.8);
         }
+
+        :deep(.iro-scroll-percent) {
+            background-color: var(--iro-theme-skin-dark);
+        }
     }
 }
 
 .iro-container {
+    transition: all 0.8s ease !important;
+
     &.iro-nav-open {
         overflow: hidden;
     }

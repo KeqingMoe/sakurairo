@@ -1,5 +1,3 @@
-
-
 import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import { h } from 'vue';
@@ -13,12 +11,12 @@ library.add(fas, far);
 import vitepressNprogress from 'vitepress-plugin-nprogress';
 import 'vitepress-plugin-nprogress/lib/css/index.css'
 
-import Layout from './Iro.vue';
+import IroLayout from './Iro.vue';
 import './style.scss';
 
 export default {
     extends: DefaultTheme,
-    Layout,
+    Layout: IroLayout,
     enhanceApp({ app, router, siteData }) {
         app.component('fa-i', FontAwesomeIcon);
         vitepressNprogress({ app, router, siteData });

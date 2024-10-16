@@ -15,6 +15,12 @@ const setDark = () => {
     htmlEl.classList.add('dark');
     iroDark.value = true;
 };
+if (iroDark.value) {
+    setDark();
+} else {
+    setLight();
+}
+
 const isAtTop = inject('isAtTop');
 const iroShow = ref(false);
 

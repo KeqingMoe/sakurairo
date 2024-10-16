@@ -1,6 +1,6 @@
 import { defineConfigWithTheme } from 'vitepress';
 import { ruby } from "@mdit/plugin-ruby";
-import iro from './theme/iro';
+import iro from './theme/config/iro';
 import { statSync } from 'fs';
 
 export default defineConfigWithTheme({
@@ -21,18 +21,18 @@ export default defineConfigWithTheme({
     ],
     lang: 'zh',
     transformPageData(pageData) {
-        if(pageData.isNotFound)return;
+        if (pageData.isNotFound) return;
 
-        pageData.lastUpdated=statSync(pageData.filePath).mtimeMs
-        
-        if(!('layout' in pageData.frontmatter)){
-            pageData.frontmatter.layout='post'
+        pageData.lastUpdated = statSync(pageData.filePath).mtimeMs
+
+        if (!('layout' in pageData.frontmatter)) {
+            pageData.frontmatter.layout = 'post'
         }
 
-        const title='VitePress 主题 Sakurairo 自述文件';
-        if(pageData.filePath=='readme.md'){
-            pageData.title=title;
-            pageData.frontmatter.title=title;
+        const title = '自述文件';
+        if (pageData.filePath == 'readme.md') {
+            pageData.title = title;
+            pageData.frontmatter.title = title;
         }
     },
 });

@@ -2,7 +2,9 @@
 
 将 [WordPress 主题 Sakurairo](https://github.com/mirai-mamori/Sakurairo) 移植到 VitePress。
 
-演示站点：[iro.keqing.moe](https://iro.keqing.moe) [sakurairo.pages.dev](https://sakurairo.pages.dev)。
+演示站点：[iro.keqing.moe](https://iro.keqing.moe) 和 [iro.pages.dev](https://iro.pages.dev)。
+
+使用文档：[docs.keqing.moe/iro](https://docs.keqing.moe/iro/)。
 
 ## 特性
 
@@ -58,6 +60,7 @@ npm run preview
   - 使用 `iro-not-found` 以自定义 404 页面
   - 使用 `iro-page` 以自定义 **自定义页面**（与 VitePress 默认主题的 `layout` 为 `page` 的页面行为类似）。 
   - 使用 `iro-home` 以自定义首页
+  - 使用 `iro-post-list` 以自定义首页文章展示部分
   - 使用 `iro-post` 以自定义文章页面
   - 使用 `iro-other` 以自定义其他页面
   - 使用 `iro-footer` 以在页脚添加自定义组件

@@ -1,6 +1,4 @@
 <script setup>
-import { useData } from 'vitepress';
-
 import { data as iro } from '../../iro.data';
 
 const iconUrl = iro.social?.iconUrl ?? 'https://s.nmxc.ltd/sakurairo_vision/@2.6/display_icon/';

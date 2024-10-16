@@ -1,8 +1,7 @@
 :root {
-    --iro-global-font-weight: 300;
-    --iro-font-color: #505050;
-    --iro-dm-bg-transparency: 0.8;
-
+    // --iro-global-font-weight: 300;
+    // --iro-font-color: #505050;
+    // --iro-dm-bg-transparency: 0.8;
 }
 
 * {
@@ -16,13 +15,6 @@ html {
 
     &.iro-open-nav {
         overflow: hidden;
-    }
-
-    &.dark {
-        --iro-font-color: #CCCCCC;
-
-        background-color: rgb(51, 51, 51);
-
     }
 
     &::-webkit-scrollbar {
@@ -44,19 +36,14 @@ html {
         background-color: var(--iro-theme-skin);
     }
 
-    &.dark :deep(.iro-scroll-percent) {
-        background-color: var(--iro-theme-skin-dark);
-    }
 }
 
 body {
     margin: 0;
     font-size: 17px;
     text-shadow: 0 0 1px rgba(0, 0, 0, .1);
-    color: var(--iro-font-color);
     font-size: 15px;
     line-height: 1.5;
-    background: #0000;
     background-attachment: fixed;
     background-position: center;
     scrollbar-width: 6px;
@@ -142,6 +129,23 @@ h1 {
     margin: .67em 0;
     clear: both;
     font-weight: var(--iro-global-font-weight);
+
+    &::before {
+        display: block;
+        content: " ";
+        height: 80px;
+        margin-top: -80px;
+        visibility: hidden;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    border-top: none !important;
 }
 
 hr {

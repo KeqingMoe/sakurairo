@@ -5,7 +5,6 @@ import { inject, ref } from 'vue';
 import { data as iro } from '../iro.data';
 
 const iroDark = inject('iroDark');
-const toggleTheme = () => iroDark.value = !iroDark.value;
 
 </script>
 
@@ -14,13 +13,14 @@ const toggleTheme = () => iroDark.value = !iroDark.value;
         <footer class="iro-footer" :class="{ 'iro-light': !iroDark, 'iro-dark': iroDark }">
             <div class="iro-header-container">
                 <div class="iro-sakura-icon">
-                    <img src="/iro/sakura_icon.svg" draggable="false" alt="sakura icon">
+                    <img src="/res/iro/sakura_icon.svg" draggable="false" alt="sakura icon">
                 </div>
                 <p v-if="iro?.footer?.beforeSlot" v-html="iro.footer.content"></p>
                 <slot name="iro-footer"></slot>
                 <p v-if="!iro?.footer?.beforeSlot" v-html="iro.footer.content"></p>
                 <span class="iro-theme-info">
-                    <a href="https://github.keqing.moe/keqingmoe/sakurairo">Theme VitePress Sakurairo</a> <a href="https://keqing.moe">by KeqingMoe</a>
+                    <a href="https://github.keqing.moe/keqingmoe/sakurairo">Theme VitePress Sakurairo</a> <a
+                        href="https://keqing.moe">by KeqingMoe</a>
                 </span>
             </div>
         </footer>
@@ -53,7 +53,7 @@ const toggleTheme = () => iroDark.value = !iroDark.value;
         width: max-content;
         height: max-content;
         margin: auto;
-        margin-bottom: 6px;
+        margin-bottom: 16px;
 
         img {
             animation: iro-slow-rotate 10s linear infinite;
