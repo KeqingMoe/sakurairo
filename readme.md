@@ -1,3 +1,5 @@
+已归档，死了，我没空继续维护它
+
 # Sakurairo
 
 将 [WordPress 主题 Sakurairo](https://github.com/mirai-mamori/Sakurairo) 移植到 VitePress。
